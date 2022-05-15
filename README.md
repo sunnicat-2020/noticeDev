@@ -1,15 +1,23 @@
-#공지사항 관리 REST API 구현
+
+## 💌 공지사항 관리 REST API 구현
+
+### 💨 소개 
 
 -----
 
-## 개발 환경
+공지사항을 등록, 수정, 삭제, 조회하는 REST API 를 구현한다.
+
+
+
+### 💨 개발 환경
 
 -----
 
-- 개발 언어 : Zulu JDK 11.56.19
-- DB : Maria DB 10.6
+- Java : Zulu JDK 11.56.19
+- DBMS : Maria DB 10.6
+- Spring Boot, JPA, JUnit5 Test
 
-## DB 스크립트
+### 💨  DB 스크립트
 
 -----
 
@@ -32,7 +40,7 @@ CREATE TABLE ATTACHMENT (
 );
 ```
 
-## 구현 목록
+### 💨  구현 목록
 
 -----
 
@@ -65,4 +73,12 @@ curl --location --request DELETE 'http://127.0.0.1:8080/notice/{id}'
    2. 응답항목: 성공여부, 메시지, 공지사항(제목, 내용, 등록일시, 조회수, 작성자)
 ```
 curl --location --request GET 'http://127.0.0.1:8080/notice'
+```
+
+### 💨  기동 방법
+
+-----
+
+```
+java -jar notice-0.0.1-SNAPSHOT.jar
 ```
