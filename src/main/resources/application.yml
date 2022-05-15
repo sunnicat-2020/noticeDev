@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/testdb
+    username: test
+    password: test1234
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        user_sql_comment: true
+    hibernate:
+      ddl-auto: none
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 50MB
+
+logging:
+  level:
+    org:
+      apache:
+        coyote:
+          http11: debug
+      hiberante:
+        SQL: debug
